@@ -22,14 +22,16 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Create and start virtual environment
+      - name: Install Dependencies
         run: |
-          python -m venv venv
-          source venv/bin/activate
+          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+          export PATH=$PATH:$HOME/.poetry/bin
+          poetry install --no-root
       
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-        
+      - name: Add Poetry to PATH
+        run: |
+          echo "##vso[task.prependpath]$HOME/.poetry/bin"
+              
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
       - name: Upload artifact for deployment jobs
