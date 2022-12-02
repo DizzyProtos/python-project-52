@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "python-project-52"
+version = "0.1.0"
+description = ""
+authors = ["dmedvedev <d.medvedev@velvetech.dev>"]
+readme = "README.md"
+packages = [{include = "python_project_52"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+django = "^4.1.3"
+python-dotenv = "^0.21.0"
+psycopg2 = "^2.9.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
