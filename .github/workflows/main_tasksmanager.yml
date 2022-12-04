@@ -31,6 +31,10 @@ jobs:
       - name: Add Poetry to PATH
         run: |
           echo "##vso[task.prependpath]$HOME/.poetry/bin"
+    
+      - name: Freeze pip requirements
+        run: |
+          pip freeze > requirements.txt
               
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       

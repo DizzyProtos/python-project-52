@@ -105,6 +105,9 @@ ENV/
 env.bak/ 
 venv.bak/ 
 
+# Please, use pyproject.toml
+requirements.txt
+
 # mkdocs documentation 
 /site 
 
