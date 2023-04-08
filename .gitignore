@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local development settings
+.env
+
+# Poetry specific files
+.venv/
+.pytest_cache/
+poetry.lock
+pyproject.toml
+
+# Django specific files
+*.log
+*.pot
+*.pyc
+*.sqlite3
+media/
+static/
+
+# Visual Studio Code specific files
+.vscode/
+*.code-workspace
+*.launch.json
+*.settings.json
